@@ -1,0 +1,27 @@
+{
+  "name": "wcs-checkpoint-4",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "setup": "npm i && npm --prefix ./client i && npm --prefix ./api i",
+    "all": "concurrently \"cd client && npm run dev\" \"cd api && npm run dev\"",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nitramXmas/WCS-Checkpoint-4.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "concurrently": "^8.1.0"
+  },
+  "dependencies": {
+    "react-icons": "^4.10.1"
+  },
+  "bugs": {
+    "url": "https://github.com/nitramXmas/WCS-Checkpoint-4/issues"
+  },
+  "homepage": "https://github.com/nitramXmas/WCS-Checkpoint-4#readme"
+}
