@@ -6,6 +6,11 @@ class TeamController extends BaseController {
     super(req, res);
     this.model = new TeamModel(req.query);
   }
+
+  getAll() {
+    console.log(this.req.query);
+    this.model.getAll().then(([results]) => this.sendJson(results));
+  }
 }
 
 module.exports = TeamController;

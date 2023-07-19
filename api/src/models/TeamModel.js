@@ -14,6 +14,13 @@ class TeamModel extends BaseModel {
       this.fields.push("*");
     }
   }
+
+  getAll() {
+    return this.db.query(
+      `SELECT ${this.fields} FROM ${this.table} WHERE country_id = ? ${this.join}`,
+      []
+    );
+  }
 }
 
 module.exports = TeamModel;
