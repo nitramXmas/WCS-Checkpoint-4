@@ -13,6 +13,12 @@ class BaseController {
     this.model.getAll().then(([results]) => this.sendJson(results));
   }
 
+  getById() {
+    this.model
+      .getById(this.req.params.id)
+      .then(([results]) => this.sendJson(results));
+  }
+
   sendJson(data) {
     this.res.status(200).json(data);
   }

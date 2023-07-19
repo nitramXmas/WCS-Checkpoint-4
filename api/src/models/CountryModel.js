@@ -1,10 +1,10 @@
 const BaseModel = require("./BaseModel");
 
-class PlayerModel extends BaseModel {
+class CountryModel extends BaseModel {
   queryFields;
 
   constructor({ fields }) {
-    super("players");
+    super("countries");
 
     this.init(fields && fields.split(","));
   }
@@ -16,4 +16,4 @@ class PlayerModel extends BaseModel {
   }
 }
 
-module.exports = PlayerModel;
+module.exports = CountryModel;

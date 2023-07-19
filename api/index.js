@@ -11,9 +11,11 @@ APIRouter.get("/version", function (req, res) {
   return res.json({ version });
 }); // create route to get the package.json version
 
-const { playerRouter } = require("./src/routes");
+const { playerRouter, teamRouter, countryRouter } = require("./src/routes");
 
 APIRouter.use("/players", playerRouter);
+APIRouter.use("/teams", teamRouter);
+APIRouter.use("/countries", countryRouter);
 
 app.listen(port, function () {
   `API is running on port ${port}`;

@@ -19,6 +19,17 @@ class BaseModel {
       `SELECT ${this.fields} FROM ${this.table} ${this.join}`
     );
   }
+
+  getById(id) {
+    return this.db.query(
+      `
+      SELECT ${this.fields}
+      FROM ${this.table}
+      ${this.join}
+      WHERE ${this.table}.id  = ?`,
+      [id]
+    );
+  }
 }
 
 module.exports = BaseModel;
