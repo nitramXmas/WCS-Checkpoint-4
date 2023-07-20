@@ -1,11 +1,15 @@
 import React, { useContext, useState } from "react";
 import GameContext from "../utils/context/GameContext";
 import { BiSolidTennisBall } from "react-icons/bi";
+import Confetti from "react-confetti";
 import "./Game.css";
 
 const Game = () => {
   let [scoreTeam1, setScoreTeam1] = useState(0);
   let [scoreTeam2, setScoreTeam2] = useState(0);
+
+  let w = window.innerWidth;
+  let h = window.innerHeight;
 
   const {
     selectedCountry1,
@@ -35,9 +39,13 @@ const Game = () => {
     }
   };
 
+  console.log(scoreTeam1);
+  console.log(scoreTeam2);
+  console.log(finalPoints);
+
   return (
     <>
-      <div>
+      {/* <div>
         <p>{selectedCountry1.name}</p>
         <p>{selectedCountry2.name}</p>
         <p>Douro : {douro}</p>
@@ -45,7 +53,7 @@ const Game = () => {
         <p>Pasa2 : {pasa2}</p>
         <p>Points / manche : {setPoints}</p>
         <p>Points finale : {finalPoints}</p>
-      </div>
+      </div> */}
       <div className="game_content">
         <div className="game_header">
           <div className="team1">
@@ -61,7 +69,7 @@ const Game = () => {
                 : "douro_team1 invisible"
             }
           >
-            <BiSolidTennisBall />
+            <BiSolidTennisBall size={24} />
           </div>
           <div
             className={
@@ -70,7 +78,7 @@ const Game = () => {
                 : "douro_team2 invisible"
             }
           >
-            <BiSolidTennisBall />
+            <BiSolidTennisBall size={24} />
           </div>
           <div className="team2">
             <p>{selectedCountry2.name}</p>
@@ -83,7 +91,13 @@ const Game = () => {
           <button onClick={() => handleDouroSwitch(1)}>{scoreTeam1}</button>
           <button onClick={() => handleDouroSwitch(2)}>{scoreTeam2}</button>
         </div>
+        <button onClick={() => (setScoreTeam1(0), setScoreTeam2(0))}>
+          RESET
+        </button>
       </div>
+      {scoreTeam1 >= finalPoints || scoreTeam2 >= finalPoints ? (
+        <Confetti width={w} height={h} />
+      ) : null}
     </>
   );
 };
