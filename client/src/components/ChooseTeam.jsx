@@ -25,8 +25,6 @@ const ChooseTeam = ({ country }) => {
         .then(setSelectedTeam([]));
   }, [country]);
 
-  console.log(selectedTeam);
-
   return (
     <div className="team_select">
       <form

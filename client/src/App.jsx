@@ -1,6 +1,8 @@
 import { useState } from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import "./App.css";
 import Setup from "./pages/Setup";
+import Game from "./pages/Game";
 import GameContext from "./utils/context/GameContext.jsx";
 
 function App() {
@@ -13,24 +15,29 @@ function App() {
 
   return (
     <>
-      <GameContext.Provider
-        value={{
-          selectedCountry1,
-          setSelectedCountry1,
-          selectedCountry2,
-          setSelectedCountry2,
-          douro,
-          setDouro,
-          pasa,
-          setPasa,
-          setPoints,
-          setSetPoints,
-          finalPoints,
-          setfinalPoints,
-        }}
-      >
-        <Setup />
-      </GameContext.Provider>
+      <Router>
+        <GameContext.Provider
+          value={{
+            selectedCountry1,
+            setSelectedCountry1,
+            selectedCountry2,
+            setSelectedCountry2,
+            douro,
+            setDouro,
+            pasa,
+            setPasa,
+            setPoints,
+            setSetPoints,
+            finalPoints,
+            setfinalPoints,
+          }}
+        >
+          <Routes>
+            <Route path="/setup" element={<Setup />}></Route>
+            <Route path="/game" element={<Game />}></Route>
+          </Routes>
+        </GameContext.Provider>
+      </Router>
     </>
   );
 }

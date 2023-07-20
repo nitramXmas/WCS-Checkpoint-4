@@ -1,0 +1,38 @@
+.game_content {
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.game_header {
+  display: flex;
+  width: 100%;
+  justify-content: space-evenly;
+}
+
+.douro_team1,
+.douro_team2 {
+  opacity: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.invisible {
+  opacity: 0;
+}
+
+.score_buttons {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  gap: 50%;
+  margin: 0, 3em;
+}
+
+.score_buttons button {
+  width: 6em;
+  height: 6em;
+}
