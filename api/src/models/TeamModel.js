@@ -15,10 +15,10 @@ class TeamModel extends BaseModel {
     }
   }
 
-  getAll() {
+  getAll(country_id) {
     return this.db.query(
       `SELECT ${this.fields} FROM ${this.table} WHERE country_id = ? ${this.join}`,
-      []
+      [country_id]
     );
   }
 }

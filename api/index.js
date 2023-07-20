@@ -7,6 +7,8 @@ const APIRouter = express.Router();
 
 app.use(cors());
 
+app.use(express.json()); //manage body as json
+
 app.use("/api", APIRouter);
 
 APIRouter.get("/version", function (req, res) {

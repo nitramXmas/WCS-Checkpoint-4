@@ -8,8 +8,8 @@ class TeamController extends BaseController {
   }
 
   getAll() {
-    console.log(this.req.query);
-    this.model.getAll().then(([results]) => this.sendJson(results));
+    const country_id = this.req.query.country_id;
+    this.model.getAll(country_id).then(([results]) => this.sendJson(results));
   }
 }
 
