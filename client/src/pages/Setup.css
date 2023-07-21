@@ -1,14 +1,18 @@
 .setup_page {
   width: 100vw;
+  height: 100vw;
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding: 1em;
+  gap: 3em;
 }
 
 .setup_content {
   display: flex;
   justify-content: center;
   align-items: center;
+  gap: 6em;
 }
 
 .setup_team1,
@@ -23,6 +27,10 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+}
+
+.flag_display {
+  width: 128px;
 }
 
 .team_select {
@@ -40,4 +48,39 @@
 
 .player_img {
   width: 30%;
+  height: 50%;
+}
+
+.generic_player {
+  width: 30%;
+  height: 50%;
+}
+
+.douro_form .form_item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.douro_form .form_item form {
+  display: flex;
+  gap: 1em;
+}
+
+.params_content {
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+}
+
+.form_item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+}
+
+.params_content form {
+  display: flex;
+  gap: 1em;
 }

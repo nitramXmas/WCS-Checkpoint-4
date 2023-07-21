@@ -10,12 +10,14 @@ const Douro = () => {
   };
 
   return (
-    <div>
-      Douro :
-      <form onChange={handleRadioChange}>
-        <input type="radio" value={selectedCountry1.name} name="douro" />
-        <input type="radio" value={selectedCountry2.name} name="douro" />
-      </form>
+    <div className="douro_form">
+      <div className="form_item">
+        Douro :
+        <form onChange={handleRadioChange}>
+          <input type="radio" value={selectedCountry1.name} name="douro" />
+          <input type="radio" value={selectedCountry2.name} name="douro" />
+        </form>
+      </div>
     </div>
   );
 };

@@ -4,10 +4,11 @@ import "./App.css";
 import Setup from "./pages/Setup";
 import Game from "./pages/Game";
 import GameContext from "./utils/context/GameContext.jsx";
+import Home from "./pages/Home";
 
 function App() {
-  const [selectedCountry1, setSelectedCountry1] = useState([]);
-  const [selectedCountry2, setSelectedCountry2] = useState([]);
+  const [selectedCountry1, setSelectedCountry1] = useState({});
+  const [selectedCountry2, setSelectedCountry2] = useState({});
   const [douro, setDouro] = useState();
   const [pasa, setPasa] = useState();
   const [setPoints, setSetPoints] = useState();
@@ -33,6 +34,7 @@ function App() {
           }}
         >
           <Routes>
+            <Route path="" element={<Home />}></Route>
             <Route path="/setup" element={<Setup />}></Route>
             <Route path="/game" element={<Game />}></Route>
           </Routes>

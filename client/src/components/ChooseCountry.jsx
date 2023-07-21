@@ -26,6 +26,8 @@ const ChooseCountry = ({ team }) => {
       .then((data) => setCountries(data));
   }, []);
 
+  console.log(selectedCountry1);
+
   return (
     <div className="country_select">
       <form
@@ -49,14 +51,24 @@ const ChooseCountry = ({ team }) => {
       {team === "team1" ? (
         <>
           <img
-            src={`https://flagsapi.com/${selectedCountry1.flag}/flat/64.png`}
+            className="flag_display"
+            src={
+              selectedCountry1.flag
+                ? `https://flagsapi.com/${selectedCountry1.flag}/flat/64.png`
+                : "https://d1nhio0ox7pgb.cloudfront.net/_img/v_collection_png/512x512/shadow/flag_generic.png"
+            }
           />
           <ChooseTeam country={selectedCountry1} />
         </>
       ) : (
         <>
           <img
-            src={`https://flagsapi.com/${selectedCountry2.flag}/flat/64.png`}
+            className="flag_display"
+            src={
+              selectedCountry2.flag
+                ? `https://flagsapi.com/${selectedCountry2.flag}/flat/64.png`
+                : "https://d1nhio0ox7pgb.cloudfront.net/_img/v_collection_png/512x512/shadow/flag_generic.png"
+            }
           />
           <ChooseTeam country={selectedCountry2} />
         </>

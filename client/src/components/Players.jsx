@@ -18,6 +18,20 @@ const Players = ({ team }) => {
 
   return (
     <div className="players_display">
+      {!players[0] ? (
+        <img
+          className="generic_player"
+          src="https://ms1.103.kz/images/f11f6f0850c8b35500e82bc656655bad/thumb/point=middle-center,w=416,h=416,q=34,watermark=false/catalog_staff_photo/7a/35/5b/7a355b625e4dc3646dbf2edf4fd0ae7e.jpg"
+          alt=""
+        />
+      ) : null}
+      {!players[0] ? (
+        <img
+          className="generic_player"
+          src="https://ms1.103.kz/images/f11f6f0850c8b35500e82bc656655bad/thumb/point=middle-center,w=416,h=416,q=34,watermark=false/catalog_staff_photo/7a/35/5b/7a355b625e4dc3646dbf2edf4fd0ae7e.jpg"
+          alt=""
+        />
+      ) : null}
       {players &&
         players.map((player) => (
           <img
