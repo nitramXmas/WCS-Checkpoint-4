@@ -1,35 +1,47 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { useState } from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import "./App.css";
+import Setup from "./pages/Setup";
+import Game from "./pages/Game";
+import GameContext from "./utils/context/GameContext.jsx";
+import Home from "./pages/Home";
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [selectedCountry1, setSelectedCountry1] = useState({});
+  const [selectedCountry2, setSelectedCountry2] = useState({});
+  const [douro, setDouro] = useState();
+  const [pasa, setPasa] = useState();
+  const [setPoints, setSetPoints] = useState();
+  const [finalPoints, setfinalPoints] = useState();
 
   return (
     <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      <Router>
+        <GameContext.Provider
+          value={{
+            selectedCountry1,
+            setSelectedCountry1,
+            selectedCountry2,
+            setSelectedCountry2,
+            douro,
+            setDouro,
+            pasa,
+            setPasa,
+            setPoints,
+            setSetPoints,
+            finalPoints,
+            setfinalPoints,
+          }}
+        >
+          <Routes>
+            <Route path="" element={<Home />}></Route>
+            <Route path="/setup" element={<Setup />}></Route>
+            <Route path="/game" element={<Game />}></Route>
+          </Routes>
+        </GameContext.Provider>
+      </Router>
     </>
-  )
+  );
 }
 
-export default App
+export default App;

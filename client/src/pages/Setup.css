@@ -1,0 +1,86 @@
+.setup_page {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1em;
+  gap: 3em;
+}
+
+.setup_content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 6em;
+}
+
+.setup_team1,
+.setup_team2 {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.country_select {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.flag_display {
+  width: 128px;
+}
+
+.team_select {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.players_display {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.player_img {
+  width: 20%;
+  height: 50%;
+}
+
+.generic_player {
+  width: 25%;
+  height: 50%;
+}
+
+.douro_form .form_item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.douro_form .form_item form {
+  display: flex;
+  gap: 1em;
+}
+
+.params_content {
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+}
+
+.form_item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+}
+
+.params_content form {
+  display: flex;
+  gap: 1em;
+}
