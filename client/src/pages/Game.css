@@ -30,10 +30,10 @@
   display: flex;
   width: 100%;
   justify-content: center;
-  gap: 14em;
+  gap: 14.5em;
 }
 
 .score_buttons button {
-  width: 6em;
+  width: 10.5em;
   height: 6em;
 }

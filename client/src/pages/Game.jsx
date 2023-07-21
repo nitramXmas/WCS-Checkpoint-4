@@ -45,21 +45,17 @@ const Game = () => {
 
   return (
     <>
-      {/* <div>
-        <p>{selectedCountry1.name}</p>
-        <p>{selectedCountry2.name}</p>
-        <p>Douro : {douro}</p>
-        <p>Pasa1 : {pasa1}</p>
-        <p>Pasa2 : {pasa2}</p>
-        <p>Points / manche : {setPoints}</p>
-        <p>Points finale : {finalPoints}</p>
-      </div> */}
       <div className="game_content">
         <div className="game_header">
           <div className="team1">
             <p>{selectedCountry1.name}</p>
             <img
-              src={`https://flagsapi.com/${selectedCountry1.flag}/flat/64.png`}
+              className="flag_display"
+              src={
+                selectedCountry1.flag
+                  ? `https://flagsapi.com/${selectedCountry1.flag}/flat/64.png`
+                  : "https://d1nhio0ox7pgb.cloudfront.net/_img/v_collection_png/512x512/shadow/flag_generic.png"
+              }
             />
           </div>
           <div
@@ -83,13 +79,22 @@ const Game = () => {
           <div className="team2">
             <p>{selectedCountry2.name}</p>
             <img
-              src={`https://flagsapi.com/${selectedCountry2.flag}/flat/64.png`}
+              className="flag_display"
+              src={
+                selectedCountry2.flag
+                  ? `https://flagsapi.com/${selectedCountry2.flag}/flat/64.png`
+                  : "https://d1nhio0ox7pgb.cloudfront.net/_img/v_collection_png/512x512/shadow/flag_generic.png"
+              }
             />
           </div>
         </div>
         <div className="score_buttons">
-          <button onClick={() => handleDouroSwitch(1)}>{scoreTeam1}</button>
-          <button onClick={() => handleDouroSwitch(2)}>{scoreTeam2}</button>
+          <button onClick={() => handleDouroSwitch(1)}>
+            {scoreTeam1} / {finalPoints}
+          </button>
+          <button onClick={() => handleDouroSwitch(2)}>
+            {scoreTeam2} / {finalPoints}
+          </button>
         </div>
         <button onClick={() => (setScoreTeam1(0), setScoreTeam2(0))}>
           RESET

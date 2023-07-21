@@ -4,9 +4,11 @@ import { Link } from "react-router-dom";
 
 const Home = () => {
   return (
-    <Link to="/setup">
-      <div className="home"></div>
-    </Link>
+    <div className="home">
+      <Link to="/setup">
+        <h1>ACCEDER A L'APPLICATION</h1>
+      </Link>
+    </div>
   );
 };
 

@@ -1,6 +1,6 @@
 .setup_page {
   width: 100vw;
-  height: 100vw;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -47,12 +47,12 @@
 }
 
 .player_img {
-  width: 30%;
+  width: 20%;
   height: 50%;
 }
 
 .generic_player {
-  width: 30%;
+  width: 25%;
   height: 50%;
 }
 
