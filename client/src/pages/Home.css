@@ -1,0 +1,14 @@
+.home {
+  height: 100vh;
+  background-image: url("https://discoverdonosti.com/wp-content/uploads/2022/09/Jai-Alai-World-Tour.jpeg");
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.home a {
+  text-decoration: none;
+  color: #fff;
+  border: 2px solid #fff;
+  padding: 1.5em 3em;
+}
